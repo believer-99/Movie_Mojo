@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           home: AnimatedSplashScreen(splash: 'assets/images/Movie_Mojo_final.png',
-          nextScreen:HomeScreen(),
+          nextScreen:AuthRegisterScreen(),
           splashTransition: SplashTransition.rotationTransition,
           backgroundColor: Color.fromARGB(255, 13, 17, 67,),
           splashIconSize:height/2,
