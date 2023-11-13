@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movie_mojo/loading_screen/spinner.dart';
+import 'package:movie_mojo/widgets/spinner.dart';
 import 'package:movie_mojo/models/user_details.dart';
 import 'package:movie_mojo/screens/authLogin.dart';
 import 'package:http/http.dart' as http;
