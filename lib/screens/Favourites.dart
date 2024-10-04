@@ -10,7 +10,6 @@ class FavoritesScreen extends StatefulWidget
   FavoritesScreen({super.key});
   @override
   State<FavoritesScreen> createState() {
-    // TODO: implement createState
     return _FavouritesScreenState();
   }
 }
@@ -19,7 +18,7 @@ class _FavouritesScreenState extends State<FavoritesScreen>
   List<MovieData>favMovies=[];
   @override
   Widget build(BuildContext context) {
- final movieinfo=context.watch<FavouriteProvider>();
+ final movieinfo=context.read<FavouriteProvider>();
  List movieInfo=movieinfo.movies;
    for (var info in movieInfo) {
       var movie = MovieData(

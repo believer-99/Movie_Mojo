@@ -70,18 +70,18 @@ class _MovieDetailsState extends State<MovieDetails> {
                       ),
                       SizedBox(width: 15,),
                        Container(
-                    child: ElevatedButton.icon(
+                    child: IconButton(
                       onPressed: () {
                         setState(() {
-                          isFavorite = !isFavorite;
-                      
                         if (isFavorite) {
                          movieData.removeMovie(MovieData(backdrop_path: widget.backdrop_path, release:widget. release, title: widget.title, vote_average:widget. vote_average, original_language: widget.lan, overview:widget. overview, poster_path:widget. poster_path));
                         
                         } else {
                           movieData.addMovie(MovieData(backdrop_path: widget.backdrop_path, release:widget. release, title: widget.title, vote_average:widget. vote_average, original_language: widget.lan, overview:widget. overview, poster_path:widget. poster_path));
                         }
-                        });
+                         isFavorite = !isFavorite;
+                        }
+                        );
                       },
                       icon: 
                      AnimatedSwitcher(
@@ -95,7 +95,6 @@ class _MovieDetailsState extends State<MovieDetails> {
                 key: ValueKey(isFavorite),
               ),
                      ),
-                     label: isFavorite?Text('Remove from Favourites'):Text('Add to Favourites'),
                     ),
                     ),
                     ]

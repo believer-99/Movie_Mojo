@@ -50,12 +50,12 @@ class _HomeScreenState extends State<HomeScreen> {
     print(topRated);
     print(allMovies);
   }
-
   @override
   Widget build(BuildContext context) {
     int flag = 0;
     double width = MediaQuery.of(context).size.width;
-    String enteredSearch = searchController.text;
+    //String enteredSearch = searchController.text;
+   
 
     TextStyle typeStyle = GoogleFonts.dosis(
         color: Colors.white, fontSize: 20, fontWeight: FontWeight.w400);
@@ -94,8 +94,11 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           ElevatedButton(
             onPressed: () {
+              print('check1');
               for (final item in allMovies) {
-                if (item?['title'] == enteredSearch) {
+                print(searchController.text)
+;                if (item?['title'] == searchController.text) {
+                  print('check2');
                   flag = 1;
                   Navigator.of(context).push(
                     MaterialPageRoute(
